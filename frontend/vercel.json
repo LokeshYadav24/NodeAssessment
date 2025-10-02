@@ -1,8 +1,7 @@
 {
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/"
-    }
+    { "source": "/api/:path*", "destination": "https://REPLACE_WITH_BACKEND/api/:path*" },
+    { "source": "/uploads/:path*", "destination": "https://REPLACE_WITH_BACKEND/uploads/:path*" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

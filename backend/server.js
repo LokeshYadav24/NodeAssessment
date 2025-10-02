@@ -13,12 +13,7 @@ dotenv.config()
 const port = process.env.PORT || 5000;
 
 const app = express();
-const corsOptions = {
-  origin: ["https://employee-management-system-indol-xi.vercel.app", "http://localhost:3000"],
-  methods: ["GET", "POST", "PATCH", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-};
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(bodyParser.json({ extended: false }));
 
 app.use("/uploads", express.static("uploads"));
